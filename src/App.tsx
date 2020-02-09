@@ -1,9 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import { TopRatedComponent } from "./components/TopRatedComponent";
 import { QueryComponent } from "./components/QueryComponent";
 import {
   getTopRatedMoviesForGenre,

@@ -15,9 +15,9 @@ export async function getTopRatedMoviesForGenre(
 }
 
 export async function isPersonTypecasted(name: string) {
-  return axios.get(URL + "movies/top-rated", { params: { name: name } });
+  return axios.get(URL + "person/typecasted", { params: { name: name } });
 }
 
 export async function findKevinBaconSeparationDegrees(name: string) {
-  return axios.get(URL + "movies/top-rated", { params: { name: name } });
+  return axios.get(URL + "person/degree-to-kb", { params: { name: name } });
 }

@@ -52,7 +52,7 @@ export function QueryComponent({ title, inputLabel, execute }: Props) {
       setError("");
       const result = await execute(input);
       if (result.data instanceof Array) setResult(result.data);
-      else setResult([result.data]);
+      else setResult([result.data.toString()]);
     } catch (err) {
       console.log(err);
       setError(err.message);
@@ -65,7 +65,6 @@ export function QueryComponent({ title, inputLabel, execute }: Props) {
         <Typography color="textPrimary" gutterBottom className={classes.header}>
           {title}
         </Typography>
-
         <TextField
           required
           id="standard-required"
@@ -75,7 +74,6 @@ export function QueryComponent({ title, inputLabel, execute }: Props) {
           fullWidth
           onChange={handleChange}
         />
-
         {result && result.length > 0 && (
           <>
             <Typography variant="h6" className={classes.title}>
